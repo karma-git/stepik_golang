@@ -11,7 +11,10 @@ Sample Output:
 */
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func ToReversed(text string) string {
 	rs := []rune(text)
@@ -29,7 +32,7 @@ func main() {
 
 	reversed := ToReversed(text)
 
-	if text == reversed {
+	if strings.ToLower(text) == strings.ToLower(reversed) {
 		fmt.Println("Палиндром")
 	} else {
 		fmt.Println("Нет")
