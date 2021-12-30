@@ -26,3 +26,4 @@ func main(){
     fmt.Println(r.area())
 }
 ```
+## strings
