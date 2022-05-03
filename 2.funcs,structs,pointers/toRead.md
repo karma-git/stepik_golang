@@ -1,4 +1,5 @@
 # Links to Read
+
 ## packages
 - [Встроенные в Go пакеты](https://golang.org/pkg/.)
 - [Организация go проекта](https://golang.org/doc/code.html)
@@ -27,3 +28,23 @@ func main(){
 }
 ```
 ## strings
+
+## errors
+
+```go
+    result, err := divide(a, b)
+	if err != nil {
+		fmt.Println("aka <except> в python")
+	} else {
+		fmt.Printf("My cool result %v", result)  // try:except:<else> 
+	}
+    defer closeDBConn()  // aka <finally>
+    if result == "MyError" {
+        panic("MyError hit, exit...")  // aka <raise> MyCoolException
+    }
+```
+
+- [panic](https://stepik.org/lesson/264473/step/5?unit=245397) - throw error
+- [defer](https://stepik.org/lesson/264473/step/7?unit=245397) - LIFO
+
+> Всякий раз, когда функция panic вступает в действие, она выполняет все функции defer, связанные с текущим потоком. Функции отложенного вызова defer могут применяться для освобождения ресурсов, использующихся в функции. Эти функции defer выполняются непосредственно перед завершением текущей функции.
